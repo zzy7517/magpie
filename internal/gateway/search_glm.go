@@ -40,9 +40,11 @@ import (
 // the next when one fails.
 
 // glmSearchTool is the plan's search tool, and glmSearchProtocol the MCP
-// version magpie asks for.
+// version magpie asks for. Zhipu renamed the tool from camel-case to the
+// snake_case it already used in the endpoint path; only the snake-case name
+// resolves in tools/call.
 const (
-	glmSearchTool     = "webSearchPrime"
+	glmSearchTool     = "web_search_prime"
 	glmSearchProtocol = "2025-03-26"
 )
 

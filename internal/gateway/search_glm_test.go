@@ -120,7 +120,7 @@ func newGLMSearchPlan(t *testing.T) *glmSearchPlan {
 				w.Header().Set("Content-Type", "application/json")
 				io.WriteString(w, `{"jsonrpc":"2.0","id":`+string(q.ID)+`,"result":{"protocolVersion":"2025-03-26","capabilities":{"tools":{}},"serverInfo":{"name":"web_search_prime","version":"1"}}}`)
 			case "tools/call":
-				if q.Params.Name != "webSearchPrime" || q.Params.Arguments["search_query"] != "latest go" {
+				if q.Params.Name != "web_search_prime" || q.Params.Arguments["search_query"] != "latest go" {
 					io.WriteString(w, `{"jsonrpc":"2.0","id":`+string(q.ID)+`,"error":{"code":-32602,"message":"bad call"}}`)
 					return
 				}
